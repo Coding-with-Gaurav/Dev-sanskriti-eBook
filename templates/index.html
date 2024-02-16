@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Book Catalogue</title>
+</head>
+<body>
+    <header>
+        
+        <div class="container">
+            <h1>Dev Sanskriti eBook</h1>
+            <h2>Literature which is changing people's lives every day.</h2>
+        </div>
+    </header>
+
+    <div class="container" id="bookList">
+        {% for book in books %}
+            <div class="book" onclick="toggleDescription(this)">
+                <img src="{{ book.book_image }}" alt="{{ book.book_name }} Cover">
+                <div class="details">
+                    <h3>{{ book.book_name }}</h3>
+                    <p class="author">Author: {{ book.author }}</p>
+                    <p class="description">Description: {{ book.description }}</p>
+                    <p class="download-link"><a href="{{ book.download_link }}" target="_blank">Download</a></p>
+                    <p class="read-online-link"><a href="{{ book.read_online_link }}" target="_blank">Read Online</a></p>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

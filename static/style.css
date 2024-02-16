@@ -1,0 +1,95 @@
+/* Existing styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center; /* Center-align header content */
+}
+
+.logo-container img {
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+h1 {
+    margin: 0;
+    display: flexbox;
+}
+h2 {
+  color: rgb(124, 165, 42);
+  font-style: italic;
+  font-size: small;
+}
+
+#bookList {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.book {
+    background-color: #fff;
+    padding: 20px;
+    margin: 10px; 
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex; 
+}
+
+.book img {
+    width: 100px;
+    border-radius: 5px;
+    margin-right: 20px; 
+}
+.details {
+    flex-grow: 1; 
+}
+
+h3 {
+    margin: 0;
+}
+
+.author, .description {
+    color: #666;
+}
+
+.download-link, .read-online-link {
+    margin-top: 10px;
+}
+
+a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.details {
+    flex-grow: 1;
+    display: none; 
+}
+
+.show-description {
+    display: block; 
+}
+
+.book {
+    transition: transform 0.3s ease-in-out;
+}
+
+.book:hover {
+    transform: scale(1.05); /* Add a hover effect */
+}
